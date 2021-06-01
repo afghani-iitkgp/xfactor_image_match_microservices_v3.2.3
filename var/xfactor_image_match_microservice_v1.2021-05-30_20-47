@@ -1,0 +1,13 @@
+2021-05-30 13:0112 DEBUG Logger Initialized
+2021-05-30 15:1826 DEBUG Logger Initialized
+2021-05-30 19:5122 DEBUG Logger Initialized
+2021-05-30 19:5425 DEBUG Logger Initialized
+2021-05-30 20:3522 DEBUG Logger Initialized
+2021-05-30 20:3537 DEBUG Logger Initialized
+2021-05-30 20:4334 DEBUG Logger Initialized
+2021-05-30 20:4710 DEBUG Logger Initialized
+2021-05-30 20:4716 ERROR __Error__'email'
+Traceback (most recent call last):
+  File "/home/amitparashar/afghaniFolder/LinkCXO_work/MyNewExperiment_xfactor_3.x/ImageMatching/xfactor_image_match_microservices_v3.2.2/Scripts/Services/RecommendationEngines/similar_looking_recommendations.py", line 57, in similar_looking_interest_profiles
+    d["email"] = j["email"]
+KeyError: 'email'

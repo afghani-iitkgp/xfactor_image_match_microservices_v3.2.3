@@ -1,0 +1,33 @@
+2021-05-31 19:3912 DEBUG Logger Initialized
+2021-05-31 19:4009 DEBUG Logger Initialized
+2021-05-31 20:5339 DEBUG Logger Initialized
+2021-05-31 20:5416 ERROR Exception occurred'access_key_id'
+2021-05-31 20:5837 DEBUG Logger Initialized
+2021-05-31 20:5949 DEBUG Logger Initialized
+2021-05-31 21:0137 DEBUG Logger Initialized
+2021-05-31 21:0212 DEBUG Logger Initialized
+2021-05-31 21:0233 ERROR __Error while downloading from S3 Bucket__An error occurred (404) when calling the HeadObject operation: Not Found
+Traceback (most recent call last):
+  File "/home/amitparashar/afghaniFolder/LinkCXO_work/MyNewExperiment_xfactor_3.x/ImageMatching/xfactor_image_match_microservices_v3.2.2/Scripts/Services/AwsConnection/aws_s3_bucket_conn.py", line 44, in download_single_test_image_from_s3Bucket
+    s3_client.download_file(bucket_name, s3_image_key, dest_file_name)
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/boto3/s3/inject.py", line 172, in download_file
+    extra_args=ExtraArgs, callback=Callback)
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/boto3/s3/transfer.py", line 307, in download_file
+    future.result()
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/s3transfer/futures.py", line 106, in result
+    return self._coordinator.result()
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/s3transfer/futures.py", line 265, in result
+    raise self._exception
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/s3transfer/tasks.py", line 255, in _main
+    self._submit(transfer_future=transfer_future, **kwargs)
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/s3transfer/download.py", line 343, in _submit
+    **transfer_future.meta.call_args.extra_args
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/amitparashar/.local/lib/python3.6/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (404) when calling the HeadObject operation: Not Found
+2021-05-31 21:0958 DEBUG Logger Initialized
+2021-05-31 21:1128 DEBUG Logger Initialized
+2021-06-01 00:0708 DEBUG Logger Initialized
+2021-06-01 00:1928 DEBUG Logger Initialized

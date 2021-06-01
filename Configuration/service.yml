@@ -1,0 +1,60 @@
+service_name: xfactor_image_match_microservice_v1
+log_level: DEBUG
+
+settings:
+  ip: 0.0.0.0
+  port: 4007
+
+path:
+  log_path: "./var/"
+
+
+#--------------------------- LinkCXO' Credentials for S3 bucket of ex-factor:-----------------------------------------#
+aws_s3_bucket_connection:
+  #---------------------------------------------  TESTING SERVER   -----------------------------------------------------
+  testing:
+      aws_s3Bucket_url: "https://xfactor-app.s3.ap-south-1.amazonaws.com"
+      aws_access_key_id: "AKIAJDKSQEA2PT3XNJHQ"
+      aws_secret_access_key: "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"
+      bucket_name: "xfactor-app"
+      region: "ap-south-1"
+
+  #---------------------------------------------  PRODUCTION SERVER   --------------------------------------------------
+  production:
+      aws_s3Bucket_url: "https://exfactor-prod.s3.ap-south-1.amazonaws.com/"
+      aws_access_key_id: "AKIAW73HBUG7WGXVW45Z"
+      aws_secret_access_key: "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"
+      bucket_name: "exfactor-prod"
+      region: "ap-south-1"
+
+#  # Self credentials for S3 bucket on fxapi@linkcxo.com
+#  aws_access_key_id: "AKIAJOVT3VGHQTBKJFSA"
+#  secret_access_key: "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"
+#  region_name: "ap-south-1"
+#  bucket_name: "xfactor-app-fx"
+
+
+ #--------------------------- LinkCXO' Credentials for MongoDB of ex-factor:-----------------------------------------#
+
+mongodb_credentials:
+  #---------------------------------------------  TESTING SERVER   -----------------------------------------------------
+  testing:
+    database: 'ex-factor-test'
+    mongodb_url: 'mongodb+srv://xfactor-test:1g5riG7DgDAqEGW4@cluster0.13dtx.mongodb.net/ex-factor-test?retryWrites=true&w=majority'
+
+  #---------------------------------------------  PRODUCTION SERVER   --------------------------------------------------
+  production:
+    database: 'exfactor'
+    mongodb_url: "mongodb+srv://xfactor-test:1g5riG7DgDAqEGW4@cluster0.13dtx.mongodb.net/exfactor?retryWrites=true&w=majority"
+
+
+
+#   #Self credentials on afghaniiit@gmail.com
+#  'database': 'lxDB'
+#  'mongodb_url': "mongodb+srv://afghaniiit:FpEoMbsmrucdBXw9@linkcxocluster.zqbck.mongodb.net/lxDB?retryWrites=true&w=majority"
+
+
+
+
+
+

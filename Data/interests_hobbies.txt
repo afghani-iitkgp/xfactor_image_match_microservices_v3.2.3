@@ -1,0 +1,14 @@
+Popular: beaches, coffee, cooking, dogs, hiking trips, video games
+Creativity: art, crafts, dancing, design, make-up, making videos, photography, singing, writing
+Sports: american football, athletics, badminton, baseball, boxing, cricket, cycling, football, golf, gym, gymnastics, martial arts, meditation, running, skiing, surfing, swimming, table tennis, volleyball, yoga
+Going out: bars, festivals, gigs, museums and galleries, nightclubs, stand up, theatre
+Staying in: baking, board games, cooking, gardening, takeaways, video games
+Film & TV: action and adventure, animated, anime, bollywood, comedy, cooking shows, crime, documentaries, drama, fantasy, game shows, horror, indie, mystery, reality shows, rom-com, romance, sci-fi, superhero, thriller
+Reading: action and adventure, biographies, classics, comedy, comic books, crime, fantasy, history, horror, manga, mystery, philosophy, poetry, psychology, romance, sci-fi, science, thriller
+Music: afro, arab, blues, classical, country,desi, EDM, electronic, Folk & acoustic, Funk, Hip Hop, House, Indie, Jazz, K-pop, Latin, Metal, Pop, Punjabi, Punk, R&B, Rap, Reggae, Rock, Soul, Sufi, Techno
+Food & Drink: Beer, Biryani, Coffee, Foodie, Gin, Maggi, Pizza, Sweet tooth, Vegan, Vegetarian, Whisky, Wine
+Travelling: Backpacking, Beaches, Camping, city breaks, country escapes, fishing trips, hiking trips, road trips, spa weekends, winter sports
+Pets: birds, cats, dogs, fish, lizards, rabbits, snakes
+Values & Traits: ambition, being active, being family-oriented, being open-minded, being romantic, confidence, creativity, empathy, intelligence, positivity, self-awareness, sense of adventure, sense of humour, social awareness
+
+
