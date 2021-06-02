@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2cbae12d-82c3-4a60-a270-eacf66ec0469" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/preference_images_dir/2021-05-27T14-33-08.091ZeXfactor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/profile_images_dir/2021-03-25T10-44-06.629ZMen5_p1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Services/AwsConnection/aws_s3_bucket_conn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/AwsConnection/aws_s3_bucket_conn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Services/ImageMatchingServices/main_image_matching_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/ImageMatchingServices/main_image_matching_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/xfactor_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/xfactor_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/running_command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/running_command.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/xfactor_image_match_microservice_v1" beforeDir="false" afterPath="$PROJECT_DIR$/var/xfactor_image_match_microservice_v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/xfactor_image_match_microservice_v1.2021-05-30_20-47" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,17 +130,17 @@
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>299</line>
+          <line>297</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>312</line>
+          <line>310</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>306</line>
+          <line>304</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -166,7 +160,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>204</line>
+          <line>202</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -181,7 +175,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>160</line>
+          <line>158</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -201,7 +195,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>293</line>
+          <line>291</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -221,12 +215,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>148</line>
+          <line>142</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>256</line>
+          <line>254</line>
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -276,17 +270,17 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>201</line>
+          <line>199</line>
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>211</line>
+          <line>209</line>
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>219</line>
+          <line>217</line>
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -301,7 +295,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>146</line>
+          <line>140</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -311,7 +305,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>257</line>
+          <line>255</line>
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -321,12 +315,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>259</line>
+          <line>257</line>
           <option name="timeStamp" value="139" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>267</line>
+          <line>265</line>
           <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -336,7 +330,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>390</line>
+          <line>388</line>
           <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -346,7 +340,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>281</line>
+          <line>279</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -386,17 +380,17 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>578</line>
+          <line>576</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>586</line>
+          <line>584</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>430</line>
+          <line>428</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -416,22 +410,22 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>329</line>
+          <line>327</line>
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>450</line>
+          <line>448</line>
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>453</line>
+          <line>451</line>
           <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>513</line>
+          <line>511</line>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -461,8 +455,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scripts/Services/MongoConnection/mongo_connection.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="190" />
+          <line>82</line>
+          <option name="timeStamp" value="191" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

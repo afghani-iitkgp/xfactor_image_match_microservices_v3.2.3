@@ -31,26 +31,26 @@ class MongoConn:
     """
     #------------------------------------------- Inserting Documents into Table_1 --------------------------------------
 
-    def insert_profileImageVector_into_Table_1(self, update_data_table1):
+    def insert_profileImageVector_into_Table_1(self, update_profile_table1):
         '''
         Insert Binary numpy array of profile images along with other data into Table_1.
         # ConnectionErrorConvert numpy array to Binary, store record in mongodb
         '''
         try:
-            update_data_table1['profile_image_embedding'] = Binary(pickle.dumps(update_data_table1['profile_image_embedding'], protocol=2), subtype=128)
+            update_profile_table1['profile_image_embedding'] = Binary(pickle.dumps(update_profile_table1['profile_image_embedding'], protocol=2), subtype=128)
 
-            self.db[const.table1_profileVectorizedImages].update_one(filter={  'user_id': update_data_table1['user_id'],
-                                                                               'profile_image_s3key': update_data_table1['profile_image_s3key'],
-                                                                               'type': update_data_table1['type'],
-                                                                               'is_dp': update_data_table1['is_dp'],
-                                                                               'gender': update_data_table1['gender']
+            self.db[const.table1_profileVectorizedImages].update_one(filter={  'user_id': update_profile_table1['user_id'],
+                                                                               'profile_image_s3key': update_profile_table1['profile_image_s3key'],
+                                                                               'type': update_profile_table1['type'],
+                                                                               'is_dp': update_profile_table1['is_dp'],
+                                                                               'gender': update_profile_table1['gender']
                                                                              },
-                                                                    update={"$set": {'user_id': update_data_table1['user_id'],
-                                                                               'profile_image_s3key': update_data_table1['profile_image_s3key'],
-                                                                               'type': update_data_table1['type'],
-                                                                               'is_dp': update_data_table1['is_dp'],
-                                                                               'gender': update_data_table1['gender'],
-                                                                               'profile_image_embedding': update_data_table1['profile_image_embedding']}
+                                                                    update={"$set": {'user_id': update_profile_table1['user_id'],
+                                                                               'profile_image_s3key': update_profile_table1['profile_image_s3key'],
+                                                                               'type': update_profile_table1['type'],
+                                                                               'is_dp': update_profile_table1['is_dp'],
+                                                                               'gender': update_profile_table1['gender'],
+                                                                               'profile_image_embedding': update_profile_table1['profile_image_embedding']}
                                                                       },
                                                                     upsert=True)
 
@@ -62,7 +62,7 @@ class MongoConn:
 
         # ------------------------------------------- Inserting Documents into table_2 -------------------------------------
 
-    def push_newProfileImgVector_into_matchedUsersArray_table2(self, new_profile_data):
+    def push_newProfileImgVector_into_matchedUsersArray_table2(self, push_profile_table2):
         '''
         Insert matched users list with percentage match along with other details into Table_2.
         This is updated/pushed only when a user adds a new profile images(whether DP or not DP) or a new user sign up and then add his profile image(s).
@@ -80,33 +80,27 @@ class MongoConn:
 
             for item in self.db[const.table2_preferencesBasedMatchedProfiles].find():
                 print(item)
-                item_gender = list(self.db['users'].find({"user_id": item["user_id"]}))[0]["gender"]
+                item_gender = list(self.db[const.table1_profileVectorizedImages].find({"user_id": item["user_id"]}))[0]["gender"]
 
                 # if ("sexual_orientation == "Straight")
-                if item_gender != new_profile_data["gender"]:
+                if item_gender != push_profile_table2["gender"]:
                     img_embedding2 = pickle.loads(item["preference_image_embedding"])
-                    img_embedding1 = pickle.loads(new_profile_data["profile_image_embedding"])
+                    img_embedding1 = pickle.loads(push_profile_table2["profile_image_embedding"])
 
                     dist = np.linalg.norm(img_embedding2 - img_embedding1)      # Geometrical Distance between Images
+                    dist = float(dist)                                          # Converting 'numpy.float32' datatype into 'float'
                     similarity_score = (1.0 / (1.0 + dist)) * 100.0             # Percentage similarity score
                     similarity_score = round(similarity_score, 2)               # Rounding off the percentage decimal value (default=2)
-                    dist = float(dist)
-
-                    # d = {}
-                    # d["match_user_id"] = new_profile_data["user_id"]
-                    # d["match_gender"] = new_profile_data["gender"]
-                    # d["match_percentage"] = similarity_score
-                    # d["match_dist"] = dist
 
 
                     self.db[const.table2_preferencesBasedMatchedProfiles].update_one(
                                                                             filter={'user_id': item['user_id'],
                                                                                     'preference_image_s3key': item['preference_image_s3key'],
                                                                                     },
-                                                                            update={"$push": {'matched_users':
-                                                                                                  {'match_user_id': new_profile_data["user_id"],
-                                                                                                   'match_gender': new_profile_data["gender"],
-                                                                                                   'match_img_s3key': new_profile_data['profile_image_s3key'],
+                                                                            update={"$addToSet": {'matched_users':
+                                                                                                  {'match_user_id': push_profile_table2["user_id"],
+                                                                                                   'match_gender': push_profile_table2["gender"],
+                                                                                                   'match_img_s3key': push_profile_table2['profile_image_s3key'],
                                                                                                    'match_percentage': similarity_score,
                                                                                                    'match_dist': dist,
                                                                                                    }
@@ -149,11 +143,15 @@ class MongoConn:
             self.db[const.table2_preferencesBasedMatchedProfiles].update_one(filter={'user_id': update_data_table2['user_id'],
                                                                                'preference_image_s3key': update_data_table2['preference_image_s3key'],
                                                                                 },
-                                                                           update={"$set": {'user_id': update_data_table2['user_id'],
+                                                                           update={"$set":
+                                                                               {
+                                                                                    'user_id': update_data_table2['user_id'],
+                                                                                    'gender': update_data_table2['gender'],
+                                                                                    'sexual_orientation': update_data_table2['sex_orientation'],
                                                                                     'preference_image_s3key': update_data_table2['preference_image_s3key'],
                                                                                     'preference_image_embedding': update_data_table2['preference_image_embedding'],
                                                                                     'matched_users': update_data_table2['matched_users']
-                                                                                     }
+                                                                                }
                                                                           },
                                                                           upsert=True)
 

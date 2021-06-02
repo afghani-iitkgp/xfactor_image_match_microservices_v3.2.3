@@ -86,8 +86,8 @@ def upload_profile_img_and_embeddings():
 
                 if profile_image_embedding is not None:
                     mongo_conn_obj = MongoConn(server=server)
-                    response1 = mongo_conn_obj.insert_profileImageVector_into_Table_1(update_data_table1=record1)
-                    response2 = mongo_conn_obj.push_newProfileImgVector_into_matchedUsersArray_table2(record1)
+                    response1 = mongo_conn_obj.insert_profileImageVector_into_Table_1(update_profile_table1=record1)
+                    response2 = mongo_conn_obj.push_newProfileImgVector_into_matchedUsersArray_table2(push_profile_table2=record1)
 
 
                 return response1, response2
